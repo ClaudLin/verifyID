@@ -35,7 +35,7 @@ func verifyResidentCertificate(ResidentCertificateNum:String) -> Bool{
             let num10 = Int(String(verifyStrArray[9]))!
             let num11 = Int(String(verifyStrArray[10]))!
             verifyNum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10
-            if ((10 - verifyNum % 10) == num11){
+            if ((10 - verifyNum % 10) % 10 == num11){
                 resultBool = true
             }else{
                 resultBool = false
